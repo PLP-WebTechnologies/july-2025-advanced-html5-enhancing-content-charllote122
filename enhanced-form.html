@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced HTML5 Page with Form</title>
+</head>
+<body>
+
+  <header>
+    <h1>HTML5 Content and Form Example</h1>
+    <p>This page demonstrates lists, tables, media elements, and a complete HTML5 form with validation.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Programming Languages List</h2>
+      <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>Java</li>
+        <li>PHP</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Programming Language Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Type</th>
+            <th>Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Python</td>
+            <td>Interpreted</td>
+            <td>Data Science, AI, Web</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Interpreted</td>
+            <td>Frontend Development</td>
+          </tr>
+          <tr>
+            <td>Java</td>
+            <td>Compiled</td>
+            <td>Mobile, Enterprise Apps</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Media Content</h2>
+
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <h2>Video:</h2>
+      <video width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4" />
+        Your browser does not support the video element.
+      </video>
+    </section>
+
+    <section>
+      <h2>Registration Form</h2>
+      <form action="#" method="post" onsubmit="return false;" novalidate>
+
+
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name" minlength="3" autocomplete="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email " autocomplete="email" />
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required min="18" max="99" />
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required pattern="^\+?[0-9]{10,15}$" placeholder="+254712345678" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Info</legend>
+
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,}$" placeholder="Minimum 5 characters" />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="6" />
+
+          <label for="confirm">Confirm Password:</label>
+          <input type="password" id="confirm" name="confirm" required minlength="6" />
+
+          <label for="role">Select Role:</label>
+          <select id="role" name="role" required>
+            <option value="">--Choose--</option>
+            <option value="student">Student</option>
+            <option value="developer">Developer</option>
+            <option value="designer">Designer</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..." maxlength="300"></textarea>
+
+          <label>
+            <input type="checkbox" name="subscribe" checked readonly />
+            Subscribe to newsletter
+          </label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 HTML5 Assignment</p>
+  </footer>
+
+</body>
+</html>
